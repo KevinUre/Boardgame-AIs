@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>DeadMansDraw.Ecosystem</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dead Mans Draw Core\Dead Mans Draw Core.csproj" />
+    <ProjectReference Include="..\Genetics Core\Genetics Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Genetics Core", "Genetics Core\Genetics Core.csproj", "{A0C7D259-2F0F-43FD-AC4A-A8B92120F973}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dead Mans Draw Core", "Dead Mans Draw Core\Dead Mans Draw Core.csproj", "{84166C48-E532-4949-ADEA-556FAF4C1C27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dead Mans Draw Ecosystem", "Dead Mans Draw Ecosystem\Dead Mans Draw Ecosystem.csproj", "{8F301F0A-B161-456D-9116-6C409A82ABCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84166C48-E532-4949-ADEA-556FAF4C1C27} = {84166C48-E532-4949-ADEA-556FAF4C1C27}
+		{A0C7D259-2F0F-43FD-AC4A-A8B92120F973} = {A0C7D259-2F0F-43FD-AC4A-A8B92120F973}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecosystem Tests", "Ecosystem Tests\Ecosystem Tests.csproj", "{35A9EAAD-4A22-4AFC-99F6-E4BEEB5F64FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F301F0A-B161-456D-9116-6C409A82ABCF} = {8F301F0A-B161-456D-9116-6C409A82ABCF}
+		{84166C48-E532-4949-ADEA-556FAF4C1C27} = {84166C48-E532-4949-ADEA-556FAF4C1C27}
+		{A0C7D259-2F0F-43FD-AC4A-A8B92120F973} = {A0C7D259-2F0F-43FD-AC4A-A8B92120F973}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dead Mans Draw Core Tests", "Dead Mans Draw Core Tests\Dead Mans Draw Core Tests.csproj", "{186AD444-82B6-4B80-B316-652A7EE8010B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0C7D259-2F0F-43FD-AC4A-A8B92120F973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C7D259-2F0F-43FD-AC4A-A8B92120F973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C7D259-2F0F-43FD-AC4A-A8B92120F973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C7D259-2F0F-43FD-AC4A-A8B92120F973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84166C48-E532-4949-ADEA-556FAF4C1C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84166C48-E532-4949-ADEA-556FAF4C1C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84166C48-E532-4949-ADEA-556FAF4C1C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84166C48-E532-4949-ADEA-556FAF4C1C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F301F0A-B161-456D-9116-6C409A82ABCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F301F0A-B161-456D-9116-6C409A82ABCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F301F0A-B161-456D-9116-6C409A82ABCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F301F0A-B161-456D-9116-6C409A82ABCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A9EAAD-4A22-4AFC-99F6-E4BEEB5F64FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A9EAAD-4A22-4AFC-99F6-E4BEEB5F64FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A9EAAD-4A22-4AFC-99F6-E4BEEB5F64FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A9EAAD-4A22-4AFC-99F6-E4BEEB5F64FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{186AD444-82B6-4B80-B316-652A7EE8010B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{186AD444-82B6-4B80-B316-652A7EE8010B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{186AD444-82B6-4B80-B316-652A7EE8010B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{186AD444-82B6-4B80-B316-652A7EE8010B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21E420AF-DA3B-4838-A0B2-000E7AB6EF0C}
+	EndGlobalSection
+EndGlobal
