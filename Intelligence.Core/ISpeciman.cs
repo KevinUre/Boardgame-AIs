@@ -9,3 +9,4 @@
     {
         T Value { get; set; }
     }
+}
