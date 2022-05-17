@@ -14,12 +14,16 @@ namespace Blackjack.AI
     public class NeuralNet
     {
         List<Neuron> Neurons {  get; set; }
-        int TotalLayers { get; set; }
+        int TotalLayers;
         public OutputBuffer latestOutput = new OutputBuffer();
         public InputBuffer latestInput = new InputBuffer();
 
         public NeuralNet(int deepLayers, int networkWidth)
         {
+            Initialize(deepLayers,networkWidth);
+        }
+
+        internal void Initialize(int deepLayers, int networkWidth) {
             TotalLayers = deepLayers + 2;
             Neurons = new List<Neuron>();
             ActivationFunction activationFunction = new ActivationFunction();
@@ -30,7 +34,7 @@ namespace Blackjack.AI
             RandomizeWeights();
         }
 
-        private void CreateNeurons(int networkWidth, ActivationFunction activationFunction)
+        internal protected virtual void CreateNeurons(int networkWidth, ActivationFunction activationFunction)
         {
             for (int layer = 0; layer < TotalLayers - 1; layer++)
             {
@@ -47,7 +51,7 @@ namespace Blackjack.AI
             }
         }
 
-        private void WireUpInputNeuronValuePointersToInputBuffer()
+        internal protected virtual void WireUpInputNeuronValuePointersToInputBuffer()
         {
             Neurons.FindAll(n => n.NetworkLevel == 0).ForEach(n =>
             {
@@ -57,7 +61,7 @@ namespace Blackjack.AI
             });
         }
 
-        private void WireUpNeuronInputsToPreviousLayerOutputPointers()
+        internal protected virtual void WireUpNeuronInputsToPreviousLayerOutputPointers()
         {
             for (int layer = 1; layer < TotalLayers; layer++)
             {
@@ -73,7 +77,7 @@ namespace Blackjack.AI
             }
         }
 
-        public void WireUpOutputNeuronOutputPointersToOutputBuffer()
+        internal protected virtual void WireUpOutputNeuronOutputPointersToOutputBuffer()
         {
             var fields = typeof(OutputBuffer).GetFields().ToList();
             List<Neuron> outputNeurons = Neurons.FindAll(n => n.NetworkLevel == TotalLayers - 1);
@@ -83,7 +87,7 @@ namespace Blackjack.AI
             }
         }
 
-        private void RandomizeWeights()
+        internal protected virtual void RandomizeWeights()
         {
             Random random = new Random();
             Neurons.ForEach(n =>
@@ -182,3 +186,4 @@ namespace Blackjack.AI
     }
 
 }
+GCNotificationStatus s
